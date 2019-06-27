@@ -18,13 +18,14 @@ a.nostyle:visited {
 
 .container {
   margin: 1rem auto;
+  padding: 0.5rem;
 }
 
 .inner-container {
-  background-color: #2f9cb8;
-  padding: 5vh 3vw;
+  background-color: #616e76;
+  padding: 3vw 3vw;
   margin: auto;
-  border-radius: 5px;
+  border: 1.3px #444e57 solid;
 }
 
 .container,
@@ -41,7 +42,6 @@ a.nostyle:visited {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 3vh;
 }
 
 .heading1 {
@@ -54,15 +54,17 @@ a.nostyle:visited {
   text-transform: uppercase;
 }
 
-.color {
-  color: blue;
+.heading1,
+.heading2 {
+  color: #feffff;
 }
 
 .tab-list {
-  font-size: 1.1rem;
-  border-bottom: 1px solid #f8f8f6;
+  font-size: 0.9rem;
+  font-weight: bold;
   padding-left: 0;
   margin: 0;
+  color: #fff2be;
 }
 
 .tab-list-item {
@@ -70,23 +72,29 @@ a.nostyle:visited {
   display: inline-block;
   list-style: none;
   margin-bottom: -1px;
-  padding: 5px;
+  padding: 14px;
   margin-right: 0.5vh;
-  background-color: 2f9cb8;
-  border: 0.05rem #f8f8f6 solid;
-  border-radius: 5px 5px 0 0;
+  background-color: #444e57;
+  border: 0.05rem #444e57 solid;
   cursor: pointer;
 }
 
 .tab-list-active {
-  background-color: #f8f8f6;
-  border: solid #f8f8f6;
+  background-color: #feffff;
+  border: 1.3px solid #444e57;
   border-width: 1px 1px 0 1px;
+  color: black;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(35%, #feffff), to(#d7dfe1));
+  background: linear-gradient(0deg, #feffff 35%, #d7dfe1 100%);
+  border-bottom: 1px solid #feffff;
 }
 
 .tab-content {
-  background-color: #f8f8f6;
-  padding: 2rem 0 2rem 2rem;
+  background-color: #feffff;
+  padding: 1rem 0 1rem 2rem;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #feffff), to(#d7dfe1));
+  background: linear-gradient(180deg, #feffff 90%, #d7dfe1 100%);
+  border: 1.3px #444e57 solid;
 }
 
 .flexwrap {
@@ -108,7 +116,7 @@ a.nostyle:visited {
 }
 
 .topics {
-  font-weight: bold;
+  font-weight: lighter;
   font-size: 1.1rem;
 }
 
@@ -120,14 +128,15 @@ a.nostyle:visited {
 .count {
   margin-left: 3vw;
   text-align: center;
+  color: #889090;
 }
 
 .topics-left {
-  margin: 2vh 0;
+  margin: 3vh 0;
 }
 
 hr {
-  border: 0.5px solid black;
+  border: 0.5px solid #889090;
   margin-right: 2rem;
 }
 

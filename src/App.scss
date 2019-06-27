@@ -1,8 +1,11 @@
 //colors
-$middle_blue: #2f9cb8;
-$blue: blue;
-$white: #f8f8f6;
+$background-grey: #616e76;
+$tab-inactive: #444e57;
+$white: #feffff;
 $black: black;
+$tab-inactive-text: #fff2be;
+$active-gradient: #d7dfe1;
+$light-grey: #889090;
 
 html {
   scroll-behavior: smooth;
@@ -24,12 +27,13 @@ a.nostyle:visited {
 
 .container {
   margin: 1rem auto;
+  padding: 0.5rem;
 }
 .inner-container {
-  background-color: $middle_blue;
-  padding: 5vh 3vw;
+  background-color: $background-grey;
+  padding: 3vw 3vw;
   margin: auto;
-  border-radius: 5px;
+  border: 1.3px $tab-inactive solid;
 }
 
 .container,
@@ -41,7 +45,6 @@ a.nostyle:visited {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 3vh;
 }
 .heading1 {
   font-size: 2.5rem;
@@ -51,35 +54,44 @@ a.nostyle:visited {
 .count {
   text-transform: uppercase;
 }
-.color {
-  color: $blue;
+
+.heading1,
+.heading2 {
+  color: $white;
 }
+
 .tab-list {
-  font-size: 1.1rem;
-  border-bottom: 1px solid $white;
+  font-size: 0.9rem;
+  font-weight: bold;
   padding-left: 0;
   margin: 0;
+  color: $tab-inactive-text;
 }
 .tab-list-item {
   text-transform: uppercase;
   display: inline-block;
   list-style: none;
   margin-bottom: -1px;
-  padding: 5px;
+  padding: 14px;
   margin-right: 0.5vh;
-  background-color: 2f9cb8;
-  border: 0.05rem $white solid;
-  border-radius: 5px 5px 0 0;
+  background-color: $tab-inactive;
+  border: 0.05rem $tab-inactive solid;
   cursor: pointer;
 }
 .tab-list-active {
   background-color: $white;
-  border: solid $white;
+  border: 1.3px solid $tab-inactive;
   border-width: 1px 1px 0 1px;
+  color: $black;
+  background: linear-gradient(0deg, $white 35%, $active-gradient 100%);
+  // This is not an ideal solution, because in some resolutions you see the line here
+  border-bottom: 1px solid $white;
 }
 .tab-content {
   background-color: $white;
-  padding: 2rem 0 2rem 2rem;
+  padding: 1rem 0 1rem 2rem;
+  background: linear-gradient(180deg, $white 90%, $active-gradient 100%);
+  border: 1.3px $tab-inactive solid;
 }
 .flexwrap {
   display: flex;
@@ -94,7 +106,7 @@ a.nostyle:visited {
   font-size: 1.1rem;
 }
 .topics {
-  font-weight: bold;
+  font-weight: lighter;
   font-size: 1.1rem;
 }
 .archives-right {
@@ -105,12 +117,13 @@ a.nostyle:visited {
 .count {
   margin-left: 3vw;
   text-align: center;
+  color: $light-grey;
 }
 .topics-left {
-  margin: 2vh 0;
+  margin: 3vh 0;
 }
 hr {
-  border: 0.5px solid $black;
+  border: 0.5px solid $light-grey;
   margin-right: 2rem;
 }
 
