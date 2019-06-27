@@ -1,0 +1,129 @@
+//colors
+$middle_blue: #2f9cb8;
+$blue: blue;
+$white: #f8f8f6;
+$black: black;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+a.nostyle:link {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+a.nostyle:visited {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.container {
+  margin: 1rem auto;
+}
+.inner-container {
+  background-color: $middle_blue;
+  padding: 5vh 3vw;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.container,
+.inner-container {
+  max-width: 700px;
+}
+
+.flex-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 3vh;
+}
+.heading1 {
+  font-size: 2.5rem;
+  margin-right: 3vw;
+}
+.heading2,
+.count {
+  text-transform: uppercase;
+}
+.color {
+  color: $blue;
+}
+.tab-list {
+  font-size: 1.1rem;
+  border-bottom: 1px solid $white;
+  padding-left: 0;
+  margin: 0;
+}
+.tab-list-item {
+  text-transform: uppercase;
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 5px;
+  margin-right: 0.5vh;
+  background-color: 2f9cb8;
+  border: 0.05rem $white solid;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+}
+.tab-list-active {
+  background-color: $white;
+  border: solid $white;
+  border-width: 1px 1px 0 1px;
+}
+.tab-content {
+  background-color: $white;
+  padding: 2rem 0 2rem 2rem;
+}
+.flexwrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.archives-left {
+  width: 60%;
+  margin: 0 5vh 5vh 0;
+}
+.subheading {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.topics {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.archives-right {
+  width: 30%;
+  overflow-wrap: break-word;
+}
+
+.count {
+  margin-left: 3vw;
+  text-align: center;
+}
+.topics-left {
+  margin: 2vh 0;
+}
+hr {
+  border: 0.5px solid $black;
+  margin-right: 2rem;
+}
+
+// I had to ask for help for the following line :)
+.topics-lines:last-of-type > hr {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .small-reverse {
+    flex-direction: column-reverse;
+  }
+  .subheading {
+    display: none;
+  }
+}
